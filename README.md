@@ -35,9 +35,8 @@ sam_matting/
 
 ## 数据准备
 
-- 在 `config/cod-sam-vit-b.yaml` 中配置训练/验证/测试数据集。示例假设每个数据集均提供配对的图像与 alpha matte。【F:matting-tzc/config/cod-sam-vit-b.yaml†L1-L42】
-- `DataProcessor` 依赖 trimap 或 alpha matte 生成 mask prompt，请确保数据集封装返回所需键值（如 `image`/`inp`、`alpha`/`gt` 以及可选的 `mask` 或 `trimap`）。【F:matting-tzc/data/data_processor.py†L17-L105】
-
+- 在 `config/cod-sam-vit-b.yaml` 中配置训练/验证/测试数据集。每个数据集均提供配对的图像与 alpha matte。自然数据集从imagenet节选，医学图像由医院提供（20张），trimap由人工标注。
+- `DataProcessor` 依赖 trimap 或 alpha matte 生成 mask prompt，请确保数据集封装返回所需键值（如 `image`/`inp`、`alpha`/`gt` 以及可选的 `mask` 或 `trimap`）。
 ## 训练
 
 ```bash
