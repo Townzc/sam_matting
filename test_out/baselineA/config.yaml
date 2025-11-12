@@ -1,0 +1,19 @@
+train_dataset:
+  alpha_dir: /raid/Data/huangtao/public/matting/vitmatte/alpha
+  fg_dir: /raid/Data/huangtao/public/matting/vitmatte/fg
+  bg_dir: /raid/Data/huangtao/public/matting/vitmatte/bg
+  batch_size: 64
+  size: 256
+val_dataset:
+  alpha_dir: /raid/Data/huangtao/public/matting/vitmatte/alpha
+  fg_dir: /raid/Data/huangtao/public/matting/vitmatte/fg
+  bg_dir: /raid/Data/huangtao/public/matting/vitmatte/bg
+  batch_size: 4
+  size: 256
+sam_checkpoint: /raid/Data/huangtao/tangzhice/matting/baseline_A/pretrained/sam_vit_b_01ec64.pth
+optimizer:
+  lr: 5.0e-05
+  weight_decay: 0.0001
+epoch_max: 100
+epoch_val: 5
+lr_min: 1.0e-06
